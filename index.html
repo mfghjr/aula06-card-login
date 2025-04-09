@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <meta name="description" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="login, acesso, segurança, conta">
+    <title>DN | Assine</title>
+</head>
+<body>
+    <main>
+        <div class="container-fluid">
+        <div class="container">
+            <div class="DivLogin">
+                <div class="card">
+                    <div class="divTitle">
+                        <span class="title">Login</span>
+                    </div>
+                <form class="form" role="form" autocomplete="off" id="formLogin" novalidate method="POST">
+                <div class="card-body" style="text-align: left;padding-left: 50px;padding-right: 50px;">
+                    <div class="form-group pt-2">
+                        <label for="txtUser" style="display: none;">E-mail</label>
+                        <input type="text" class="form-input" name="txtUser" id="txtUser" required placeholder="E-mail">
+                        <div class="invalid-feedback">Oops, you missed this one.</div>
+                        <div class="form-group pt-2">
+                            <label for="txtPassword" style="display: none;">Senha</label>
+                            <input type="password" class="form-input" name="txtPassword" id="txtPassword" required autocomplete="new-password" placeholder="Senha">
+                            <div class="invalid-feedback">Enter your password too!</div>
+                        </div>
+                        <div class="form-group" style="display:none">
+                            <p class="pt-2">Perfil do assinante</p>
+                            <select onchange="objLogin.checkComboPerfil(this)" class="form-input" id="cboPerfil" name="cboPerfil" placeholder="Perfil:"><option value="Assinante" selected>Assinante</option>
+                            </select>
+                        </div>
+                        <div style="padding-top: 20px;padding-bottom: 20px;">
+                            <span>
+                                <button onclick="return objLogin.login()" type="button" class="btn btn-lg btn-success">Acessar</button>
+                            </span>
+                        </div>
+                        <div style="min-height: 45px;">
+                            <span id="spanMensagem" style="color: red;"></span>
+                        </div>
+                        <div style="text-align: left;"><p class="pt-4 text-muted" style="margin-bottom: 5px !important;">
+                            <a href="/lojadiariodonordeste/validacao-cadastro/" onclick>Já é assinante e não tem login?</a>
+                        </p>
+                        <p class="text-muted" style>
+                           <a href="/lojadiariodonordeste/esqueci-senha" onclick>Esqueceu a senha?</a> 
+                        </p>
+                        </div>
+                    </div>
+             </form>
+                </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divRodape" style="display:block;"> © Diário do Nordeste. Todos os direitos reservados. </div>
+    </main>
+    
+</body>
+</html>
